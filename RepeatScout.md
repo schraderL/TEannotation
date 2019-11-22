@@ -4,6 +4,8 @@
 - add ```nseg``` to path (otherwise RepeatScout's ```filter-stage-1.prl``` will produce an empty output)
 
 ```bash
+# add RepeatScout
+export PATH=$PATH:/global/projects/programs/source/RepeatScout-1
 export PATH=$PATH:"/global/projects/programs/source/censor-4.2.29/src/lcfilter/nseg/"
 ```
 ## Prepare folders and files
@@ -38,8 +40,6 @@ filter-stage-1.prl $genome.repeats.fas > $genome.repeats.fas.filtered_1
 ```bash
 # datafolder = folder with reference libraries (e.g. ProfilesBankForREPET_Pfam27.0_GypsyDB.hmm)
 export datafolder="/global/homes/jg/schradel/data/REPET"
-# folder where programs are installed
-export PROGRAMS=
 
 # add REPET_PATH to PATH
 export REPET_PATH=/global/projects/programs/source/REPET_linux-x64-2.5
@@ -48,8 +48,6 @@ export PATH=$REPET_PATH/bin:$PATH
 export LD_LIBRARY_PATH=/global/projects/programs/source/libs/
 # add REPET to PYTHONPATH
 export PYTHONPATH=$REPET_PATH:$PYTHONPATH
-# add RepeatScout
-export PATH=$PATH:/global/projects/programs/source/RepeatScout-1
 
 # Define MYSQL settings
 export REPET_HOST=ebbsrv05
