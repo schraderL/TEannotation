@@ -13,12 +13,10 @@ base=/global/homes/jg/schradel/data/TEannotation/RS
 mkdir $base
 cd $base
 
-# Retrieve genome to process
-cp ../../GAGA/upload20190725/Quiver_polished_genomes/GAGA-0026_Myrmecocystus_mendax/GAGA-0026_Myrmecocystus_mendax.fasta.gz .
-# clean up the fasta headers
-zcat GAGA-0026_Myrmecocystus_mendax.fasta.gz | cut -f 1 -d "|" > GAGA-0026_Myrmecocystus_mendax.fa
+# Retrieve genome to process and clean up the fasta headers
+cat <path_to_genome.fa> | cut -f 1 -d "|" > genome.fa
 # define genome file for later use
-genome=$(readlink -f GAGA-0026_Myrmecocystus_mendax.fa)
+genome=$(readlink -f genome.fa)
 
 ```
 
